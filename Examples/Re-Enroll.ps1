@@ -1,4 +1,12 @@
-﻿  param(
+<#
+   
+Office365 Multifactor re-enroll Script
+-Will remove any MFA devic enrolled, or second factor auth defined
+*Sanitized* Credentials required etc 
+   
+#>
+
+param(
     [Parameter(Mandatory)]
     [ValidateScript({
       If ($_ -match @"

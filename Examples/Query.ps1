@@ -1,4 +1,14 @@
-﻿  param(
+<#
+   
+Office365 Multifactor Query Script
+-Will conect to Azure via stored encrypted credentials
+-Will query Azure AD group linked an MFA Conditional policy 
+-Will query an MFA device is enrolled, or second factor defined
+*Sanitized* Credentials required etc 
+   
+#>
+   
+   param(
     [Parameter(Mandatory)]
     [ValidateScript({
       If ($_ -match @"

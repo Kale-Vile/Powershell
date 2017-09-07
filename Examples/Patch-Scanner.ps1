@@ -1,10 +1,11 @@
 ﻿<#
 
 -----------------------------------------
-
 Patch Scanning Utility 
--targets either 2008r2 or 2012r2 for a specified KB 
-
+-targets either 2008r2 or 2012r2 machine on the domain for a specified KB 
+-using ping/test-connection if statement to test only connectivity to reduce timeouts
+-Builds Array, outputs to console, emails csv attachement to user depending on answers
+-expanded, 
 -----------------------------------------
 #>
 
@@ -12,7 +13,7 @@ Patch Scanning Utility
 
 $OutputArray = @()
 $filelocation = "C:\Temp\Patch-Report.csv"
-$names = Get-content E:\computers.txt # breakout text array for testing 
+$names = Get-content C:\computers.txt # breakout text array for testing, enter a valid txt file 
 
 
 do
